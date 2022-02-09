@@ -6,7 +6,7 @@
 /*   By: letumany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 10:21:26 by letumany          #+#    #+#             */
-/*   Updated: 2022/02/09 10:27:12 by letumany         ###   ########.fr       */
+/*   Updated: 2022/02/09 10:43:25 by letumany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,16 @@ int	main(void)
 {
 	int					pid;
 	struct sigaction	sa;
+	char				*c_pid;
 
 	init_data();
 	sa.sa_handler = sig_handler;
 	sigemptyset(&sa.sa_mask);
 	sa.sa_flags = SA_SIGINFO;
 	pid = (int)getpid();
-	ft_putstr(ft_itoa(pid));
+	c_pid = ft_itoa(pid);
+	ft_putstr(c_pid);
+	free (c_pid);
 	write(1, "\n", 1);
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
