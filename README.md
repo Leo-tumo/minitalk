@@ -1,5 +1,6 @@
 # minitalk
 ![](https://github.com/hanshazairi/42-minitalk/workflows/norminette/badge.svg)
+[![letumany's 42 minitalk Score](https://badge42.vercel.app/api/v2/cl1l8hert000609l6rjl6rx6o/project/2484591)](https://github.com/JaeSeoKim/badge42)
 
 ### The purpose of this project is to code a small data exchange program using UNIX signals.
 We have to create a communication program in the form of a client and a server.
